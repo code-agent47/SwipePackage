@@ -1,0 +1,29 @@
+{
+  "name": "swipepackage",
+  "version": "1.0.0",
+  "description": "An npm package for making scrollable divs scroll horizontally and vertically",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-agent47/SwipePackage.git"
+  },
+  "keywords": [
+    "Swipe",
+    "Scrollable",
+    "divs"
+  ],
+  "author": "Thanni Gafar Olamilekan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/code-agent47/SwipePackage/issues"
+  },
+  "homepage": "https://github.com/code-agent47/SwipePackage#readme",
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "nodemon": "^2.0.2"
+  }
+}
