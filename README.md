@@ -23,14 +23,7 @@ The two methods of the package accepts two arguments.
 
 ### Below is a project example in react
 
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;" markdown="1">
-  <iframe markdown="1"
-    src="https://glitch.com/embed/#!/embed/snow-knowing-art?path=webpack.config.js&previewSize=0"
-    title="snow-knowing-art on Glitch"
-    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+[project Example] (https://glitch.com/~snow-knowing-art)
 
 
 
