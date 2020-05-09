@@ -23,6 +23,7 @@ The two methods of the package accepts two arguments.
 
 ### below is a project example in react
 
+```html
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     src="https://glitch.com/embed/#!/embed/snow-knowing-art?path=webpack.config.js&previewSize=0"
@@ -31,6 +32,7 @@ The two methods of the package accepts two arguments.
     style="height: 100%; width: 100%; border: 0;">
   </iframe>
 </div>
+```
 
 
 
