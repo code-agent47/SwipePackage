@@ -23,7 +23,7 @@ The two methods of the package accepts two arguments.
 
 ### Below is a project example in react
 
-[project Example] (https://glitch.com/~snow-knowing-art)
+![project Example] (https://glitch.com/~snow-knowing-art)
 
 
 
