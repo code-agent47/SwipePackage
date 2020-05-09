@@ -5,7 +5,7 @@ An npm package that let's you swipe scroll-able divs horizontally  and verticall
 
 # Installation
 To use this package, you have to install it like every other package. To install it use the command below
-### npm install SwipePackage
+### npm install swipePackage
 
 # Getting started
 After successfull installation of the package, you can use the two methods above by either importing the package or requiring it.
