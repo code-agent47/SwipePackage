@@ -21,10 +21,10 @@ The two methods of the package accepts two arguments.
 2. the speed at which you want them to swipe. Below is an example
 #### slideVertically(document.getElementsByClassName("dashboard-slide")[0],2);
 
-### below is a project example in react
+### Below is a project example in react
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;" markdown="1">
-  <iframe
+  <iframe markdown="1"
     src="https://glitch.com/embed/#!/embed/snow-knowing-art?path=webpack.config.js&previewSize=0"
     title="snow-knowing-art on Glitch"
     allow="geolocation; microphone; camera; midi; vr; encrypted-media"
