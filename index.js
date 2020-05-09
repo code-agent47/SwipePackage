@@ -1,8 +1,3 @@
-Function.prototype.method = function (name, func) {
-    this.prototype[name] = func;
-    return this;
-};
-
 const getEventType = () => {
     let hasTouchscreen = 'ontouchstart' in window;
     let swipeStart;
@@ -25,14 +20,14 @@ const getEventType = () => {
     }
 }
 
-const slideHorizontally = (slider,speed) => {
+const swipeHorizontally = (slider,speed) => {
     let isDown = false;
     let startX;
     let scrollLeft;
     let mousePos;
 
     slider.addEventListener(getEventType().swipeStart, (e) => {
-        /* Get mouse position */
+        /* Get mouse position based on event type*/
         if(getEventType().swipeStart === "touchstart"){
             mousePos = e.changedTouches[0].pageX;
         }
@@ -48,7 +43,7 @@ const slideHorizontally = (slider,speed) => {
         isDown = false;
     });
     slider.addEventListener(getEventType().swipeMove, (e) => {
-        /* Get mouse position */
+        /* Get mouse position based on event type*/
         if(getEventType().swipeMove === "touchmove"){
             mousePos = e.changedTouches[0].pageX;
         }
@@ -62,16 +57,51 @@ const slideHorizontally = (slider,speed) => {
         const moveBy = (startX - x) * speed; 
         slider.scrollLeft = scrollLeft + moveBy;
     });
+    return true;
 }
 
-Object.method('swipeHorizontally', function (...args){
-    if(args[0] !== undefined){
-        slideHorizontally(Object,args[0]);
-        return;
-    }
-    slideHorizontally(Object,1);
-});
+const swipeVertically = (slider,speed) => {
+    let isDown = false;
+    let startX;
+    let scrollTop;
+    let mousePos;
+
+    slider.addEventListener(getEventType().swipeStart, (e) => {
+        /* Get mouse position */
+        if(getEventType().swipeStart === "touchstart"){
+            mousePos = e.changedTouches[0].pageY;
+        }
+        else{
+            mousePos = e.clientY;
+        }
+
+        isDown = true;
+        startX = mousePos - slider.scrollTop;
+        scrollTop = slider.scrollTop;
+    });
+    slider.addEventListener(getEventType().swipeUp, () => {
+        isDown = false;
+    });
+    slider.addEventListener(getEventType().swipeMove, (e) => {
+        /* Get mouse position */
+        if(getEventType().swipeMove === "touchmove"){
+            mousePos = e.changedTouches[0].pageY;
+        }
+        else{
+            mousePos = e.clientY;
+        }
+
+        if(!isDown) return;
+        e.preventDefault();
+        const x = mousePos - slider.scrollTop;
+        const moveBy = (startX - x) * speed; 
+        slider.scrollTop = scrollTop + moveBy;
+    });
+    return true;
+}
 
 module.exports = {
-    swipeHorizontally
+    swipeHorizontally,
+    swipeVertically,
+    getEventType
 };
